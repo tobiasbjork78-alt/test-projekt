@@ -158,6 +158,35 @@
             color: #a855f7;
         }
 
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border-bottom: 1px solid rgba(168, 85, 247, 0.15);
+        }
+
+        nav a {
+            color: #c084fc;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 6px 16px;
+            border-radius: 8px;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        nav a:hover {
+            background: rgba(168, 85, 247, 0.15);
+            color: #e0e0e0;
+        }
+
+        nav a.active {
+            background: rgba(168, 85, 247, 0.2);
+            color: #e0e0e0;
+        }
+
         @media (max-width: 600px) {
             header h1 {
                 font-size: 2.5rem;
@@ -169,6 +198,11 @@
     </style>
 </head>
 <body>
+
+<nav>
+    <a href="index.html" class="active">Hem</a>
+    <a href="kontakt.html">Kontakt</a>
+</nav>
 
 <header>
     <h1>Saga</h1>
