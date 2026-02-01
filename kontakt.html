@@ -204,13 +204,57 @@
         }
 
         footer {
+            background: rgba(255, 255, 255, 0.02);
+            border-top: 1px solid rgba(168, 85, 247, 0.15);
+            padding: 40px 20px 20px;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            color: #c084fc;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-section ul li a {
+            color: #d1d5db;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .footer-section ul li a:hover {
+            color: #a855f7;
+        }
+
+        .footer-bottom {
             text-align: center;
-            padding: 40px 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(168, 85, 247, 0.1);
             color: #6b7280;
             font-size: 0.9rem;
         }
 
-        footer span {
+        .footer-bottom span {
             color: #a855f7;
         }
 
@@ -220,6 +264,10 @@
             }
             .contact-grid {
                 grid-template-columns: 1fr;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
             }
         }
     </style>
@@ -291,7 +339,45 @@
 </main>
 
 <footer>
-    Byggd med <span>&hearts;</span> av <strong>Saga</strong> &amp; <strong>Tobias</strong> &mdash; 2026
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Projekt</h3>
+            <ul>
+                <li><a href="https://github.com/tobiassaga/test-projekt" target="_blank" rel="noopener">GitHub Repository</a></li>
+                <li><a href="https://test-projekt.vercel.app" target="_blank" rel="noopener">Live Demo</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Kontakt</h3>
+            <ul>
+                <li><a href="mailto:tobias@example.com">E-post</a></li>
+                <li><a href="https://github.com/tobiassaga" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="#form">Kontaktformulär</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Om oss</h3>
+            <ul>
+                <li><a href="index.html#vem">Om Saga</a></li>
+                <li><a href="index.html#vad">Vad kan vi?</a></li>
+                <li><a href="index.html#resa">Vår resa</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        Byggd med <span>&hearts;</span> av <strong>Saga</strong> &amp; <strong>Tobias</strong> &mdash; 2026
+    </div>
 </footer>
 
 <script>
